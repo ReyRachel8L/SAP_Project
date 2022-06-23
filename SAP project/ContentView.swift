@@ -16,7 +16,7 @@ struct ContentView: View {
              option3: "lost count",
              option4: "never gonna give u up",
              correctOption: .option4),
-
+        
         
         quiz(question: "What do you call Zuma when he has a fever?",
              option1: "He's never sick",
@@ -55,13 +55,13 @@ struct ContentView: View {
                 .opacity(0.3)
             
             
-                    .onTapGesture {
-                        currentQuestion += 1
-                        if currentQuestion == questions.count {
-                            currentQuestion = 0
-                        }
-                        isPositiveAlertShown = true
+                .onTapGesture {
+                    currentQuestion += 1
+                    if currentQuestion == questions.count {
+                        currentQuestion = 0
                     }
+                    isPositiveAlertShown = true
+                }
             
             
             VStack {
@@ -137,6 +137,12 @@ struct ContentView: View {
                     Button(role: .none) {
                         print("Yay!")
                         isAnswerCorrect = true
+                        
+                        if currentQuestion < 3 {
+                            currentQuestion += 1
+                        } else {
+                            currentQuestion = 0
+                        }
                     } label: {
                         Text("Continue => ")
                     }
