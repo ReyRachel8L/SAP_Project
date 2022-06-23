@@ -12,24 +12,23 @@ struct ContentView: View {
     let questions = [
         quiz(question: "How many times has YJ rick rolled us till date?",
              option1: "3",
-             option2: "4",
+             option2: "never gonna give u up",
              option3: "lost count",
              option4: "never gonna give u up",
              correctOption: .option4),
-        
-        
+      
         quiz(question: "What do you call Zuma when he has a fever?",
              option1: "He's never sick",
              option2: "COld dog",
              option3: "hoT dog",
              option4: "Dead dog",
-             correctOption: .option4),
+             correctOption: .option3),
         
         quiz(question: "Who is the best paw patrol dog?",
              option1: "rubble", option2: "ROCKY",
              option3: "Chase!!!!",
              option4: "sky :)",
-             correctOption: .option4),
+             correctOption: .option3),
         
         quiz(question: "Is this a fake kahoot?",
              option1: "yes",
@@ -37,6 +36,7 @@ struct ContentView: View {
              option3: "absolutely yes",
              option4: "absolutely no",
              correctOption: .option4)
+        
     ]
     
     @State var currentQuestion = 0
@@ -79,7 +79,7 @@ struct ContentView: View {
                         Button {
                             print(1)
                             isPositiveAlertShown = true
-                            correctWrong = "Wrong!!!! Why r u so dumb u never pay attenetion  ❌❌❌❌❌"
+                            correctWrong = "Wrong!!!! Why r u so dumb u never pay attenetion  ❌❌❌❌"
                         } label: {
                             Text(questions[currentQuestion].option1)
                         }
