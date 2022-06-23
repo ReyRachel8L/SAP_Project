@@ -12,10 +12,10 @@ struct ContentView: View {
     let questions = [
         quiz(question: "How many times has YJ rick rolled us till date?",
              option1: "3",
-             option2: "4",
+             option2: "never gonna give u up",
              option3: "lost count",
-             option4: "never gonna give u up",
-             correctOption: .option4),
+             option4: "4",
+             correctOption: .option2),
 
         
         quiz(question: "What do you call Zuma when he has a fever?",
@@ -23,13 +23,13 @@ struct ContentView: View {
              option2: "COld dog",
              option3: "hoT dog",
              option4: "Dead dog",
-             correctOption: .option4),
+             correctOption: .option3),
         
         quiz(question: "Who is the best paw patrol dog?",
              option1: "rubble", option2: "ROCKY",
              option3: "Chase!!!!",
              option4: "sky :)",
-             correctOption: .option4),
+             correctOption: .option3),
         
         quiz(question: "Is this a fake kahoot?",
              option1: "yes",
