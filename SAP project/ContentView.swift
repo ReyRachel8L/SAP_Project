@@ -139,6 +139,12 @@ struct ContentView: View {
                     Button(role: .none) {
                         print("Yay!")
                         isAnswerCorrect = true
+                        
+                        if currentQuestion < 3 {
+                            currentQuestion += 1
+                        }  else {
+                            currentQuestion = 0
+                        }
                     } label: {
                         Text("Continue => ")
                     }
