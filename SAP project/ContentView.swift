@@ -14,25 +14,29 @@ struct ContentView: View {
              option1: "3",
              option2: "4",
              option3: "lost count",
-             option4: "never gonna give u up"),
+             option4: "never gonna give u up",
+             correctOption: .option4),
 
         
         quiz(question: "What do you call Zuma when he has a fever?",
              option1: "He's never sick",
              option2: "COld dog",
              option3: "hoT dog",
-             option4: "Dead dog"),
+             option4: "Dead dog",
+             correctOption: .option4),
         
         quiz(question: "Who is the best paw patrol dog?",
              option1: "rubble", option2: "ROCKY",
              option3: "Chase!!!!",
-             option4: "sky :)"),
+             option4: "sky :)",
+             correctOption: .option4),
         
         quiz(question: "Is this a fake kahoot?",
              option1: "yes",
              option2: "no",
              option3: "absolutely yes",
-             option4: "absolutely no")
+             option4: "absolutely no",
+             correctOption: .option4)
     ]
     
     @State var currentQuestion = 0
