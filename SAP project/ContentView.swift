@@ -37,6 +37,7 @@ struct ContentView: View {
              option3: "absolutely yes",
              option4: "absolutely no",
              correctOption: .option4)
+        
     ]
     
     @State var currentQuestion = 0
@@ -77,7 +78,7 @@ struct ContentView: View {
                         Button {
                             print(1)
                             isPositiveAlertShown = true
-                            correctWrong = "Wrong!!!! Why r u so dumb u never pay attenetion  ❌❌❌❌❌"
+                            correctWrong = "Wrong!!!! Why r u so dumb u never pay attenetion  ❌❌❌❌❌❌"
                         } label: {
                             Text(questions[currentQuestion].option1)
                         }
