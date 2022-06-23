@@ -65,6 +65,8 @@ struct ContentView: View {
             
             
             VStack {
+                ProgressView(value: Double(currentQuestion), total: Double(questions.count))
+                    .padding()
                 Text(questions[currentQuestion].question)
                     .padding(40)
                     .font(.system(size: 20))
