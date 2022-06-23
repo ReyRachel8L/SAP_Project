@@ -14,10 +14,9 @@ struct ContentView: View {
              option1: "3",
              option2: "never gonna give u up",
              option3: "lost count",
-             option4: "4",
-             correctOption: .option2),
-
-        
+             option4: "never gonna give u up",
+             correctOption: .option4),
+      
         quiz(question: "What do you call Zuma when he has a fever?",
              option1: "He's never sick",
              option2: "COld dog",
@@ -56,16 +55,18 @@ struct ContentView: View {
                 .opacity(0.3)
             
             
-                    .onTapGesture {
-                        currentQuestion += 1
-                        if currentQuestion == questions.count {
-                            currentQuestion = 0
-                        }
-                        isPositiveAlertShown = true
+                .onTapGesture {
+                    currentQuestion += 1
+                    if currentQuestion == questions.count {
+                        currentQuestion = 0
                     }
+                    isPositiveAlertShown = true
+                }
             
             
             VStack {
+                ProgressView(value: Double(currentQuestion), total: Double(questions.count))
+                    .padding()
                 Text(questions[currentQuestion].question)
                     .padding(40)
                     .font(.system(size: 20))
@@ -138,6 +139,12 @@ struct ContentView: View {
                     Button(role: .none) {
                         print("Yay!")
                         isAnswerCorrect = true
+                        
+                        if currentQuestion < 3 {
+                            currentQuestion += 1
+                        } else {
+                            currentQuestion = 0
+                        }
                     } label: {
                         Text("Continue => ")
                     }
